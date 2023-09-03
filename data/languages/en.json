@@ -1,0 +1,12 @@
+{
+  "about": "About",
+  "experience": "Experience",
+  "proyects": "Proyects",
+  "skills": "Skills",
+  "badge": "Full Stack Developer",
+  "resume": "I'm looking for challenges to grow professionally and collaborate on robust web projects.",
+  "aboutme": [
+    "I am a passionate software developer specializing in advanced technologies such as Git, React, Node, Typescript, Tailwind, and PHP. With extensive experience in creating robust and efficient web applications, I am known for my focus on code quality.",
+    "If you're looking to take your projects to the next level and benefit from my experience and enthusiasm, I'm here to help."
+  ]
+}

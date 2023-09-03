@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import dataES from '@/data/es/data';
+import dataES from '@/data/languages/es';
 
 export const useLanguageStore = create((set, get) => ({
   language: 'EN',
