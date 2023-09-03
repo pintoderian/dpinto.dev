@@ -8,5 +8,40 @@
   "aboutme": [
     "I am a passionate software developer specializing in advanced technologies such as Git, React, Node, Typescript, Tailwind, and PHP. With extensive experience in creating robust and efficient web applications, I am known for my focus on code quality.",
     "If you're looking to take your projects to the next level and benefit from my experience and enthusiasm, I'm here to help."
+  ],
+  "readmore": "Read more",
+  "experiences": [
+    {
+      "title": "Senior FullStack Developer",
+      "company": "El Universo",
+      "employmentStatus": "Full-time",
+      "date": "Sep 2021 - Present",
+      "resume": "Developed React components for ARC PUBLISHing, configured servers with Nginx, and migrated sites to Digital Ocean. Managed DFP integration with Piano and developed APIs with Express and Typescript.",
+      "description": "<ul>\n<li>Developed React components with ARC PUBLISHING for eluniverso.com</li>\n<li>Created microsites with Next.js and tailwindcss</li>\n<li>Adapted components with tailwindcss to enhance the user experience</li>\n<li>Implemented SCRUM methodology for task deployment</li>\n<li>Configured and maintained servers using Nginx</li>\n<li>Migrated websites to Digital Ocean for improved scalability and efficiency</li>\n<li>Integrated DoubleClick for Publishers (DFP) with Piano and maintained advertising modules</li>\n<li>Developed APIs with Express, Typescript, Jest, Husky, and Prettier</li>\n<li>Implemented Directus Headless CMS to optimize company business processes</li>\n</ul>"
+    },
+    {
+      "title": "Senior FullStack Developer",
+      "company": "Ecuavisa",
+      "employmentStatus": "Full-time",
+      "date": "Oct 2020 - Sep 2021",
+      "resume": "Led the migration of www.ecuavisa.com's CMS from Drupal to Protectmedia's IterCMS, ensuring uninterrupted site functionality. Developed custom modules, integrated Mediastream, and optimized site performance and SEO. Managed users and servers to maintain uninterrupted operation.",
+      "description": "<ul>\n<li>Led the migration of www.ecuavisa.com's CMS from Drupal to Protectmedia's IterCMS, ensuring uninterrupted site functionality</li>\n<li>Provided efficient technical support to editorial staff, ensuring timely issue resolution</li>\n<li>Developed custom modules to enhance Ecuavisa's website functionality and meet business needs</li>\n<li>Integrated the Mediastream video platform for an improved user experience</li>\n<li>Designed and developed microsites within the CMS to promote specific events and marketing campaigns</li>\n<li>Managed user access and data security within the CMS</li>\n<li>Optimized website speed and improved Google ranking through effective SEO strategies</li>\n<li>Corrected AMP template code to enhance mobile loading speed</li>\n<li>Administered servers to deploy various APIs and custom modules, ensuring uninterrupted website operation</li>\n</ul>"
+    },
+    {
+      "title": "Project Leader",
+      "company": "SV Technology",
+      "employmentStatus": "Full-time",
+      "date": "Mar 2020 - Sep 2020",
+      "resume": "Developed electronic invoicing systems with Laravel (PHP) and Vue.js, integrated with SAP Business One for efficient business accounting management. Also built a payroll system with the same technologies for streamlined employee payments. Conducted database migrations across MySQL, SQLServer, and PostgreSQL to ensure data integrity, oversaw software implementations and quality testing, provided software support to users, and developed custom modules to enhance company efficiency and productivity.",
+      "description": "<ul>\n<li>Developed electronic invoicing systems with Laravel (PHP) and Vue.js, integrated with SAP Business One for efficient business accounting management</li>\n<li>Developed a payroll system using Laravel (PHP) and Vue.js to simplify employee payment calculations and processing</li>\n<li>Conducted database migrations across various systems, including MySQL, SQLServer, and PostgreSQL, to ensure data integrity and security throughout the process</li>\n<li>Oversaw software implementation and testing to ensure the quality and proper functioning of the final product</li>\n<li>Provided software support to users, offering solutions and technical assistance in case of system issues or errors</li>\n<li>Developed custom modules to improve company processes and streamline workflow across different departments, optimizing overall efficiency and productivity</li>\n</ul>"
+    },
+    {
+      "title": "FullStack Developer",
+      "company": "Orodelti",
+      "employmentStatus": "Full-time",
+      "date": "Sep 2018 - Mar 2020",
+      "resume": "Developed enterprise platforms using PHP, Vue.js, Node.js, JQuery, HTML5, Bootstrap 4, Laravel, and .Net. Additionally, created Android applications, conducted data analysis, and generated reports for informed business decisions. Managed database migrations across PostgreSQL, SQLServer, and MYSQL, ensuring optimal functionality.",
+      "description": "<ul>\n<li>Developed enterprise platforms using PHP, Vue.js, Node.js, JQuery, HTML5, Bootstrap 4, Laravel, and .Net</li>\n<li>Created Android mobile applications</li>\n<li>Conducted data analysis and generated reports for informed business decisions</li>\n<li>Managed database migrations across systems such as PostgreSQL, SQLServer, and MYSQL, ensuring proper functionality and query optimization</li>\n</ul>"
+    }
   ]
 }
