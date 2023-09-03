@@ -4,6 +4,7 @@ import Header from './components/header';
 import Sidebar from './components/sidebar';
 import AboutMe from './components/about-me';
 import Experiences from './components/experiences';
+import Skills from './components/skills';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="info-content flex flex-col gap-4 py-14">
           <AboutMe />
           <Experiences />
+          <Skills />
         </div>
       </main>
       <footer></footer>

@@ -1,6 +1,7 @@
 'use client';
 
 import useTranslate from '@/hooks/useTranslate';
+import Title from './title';
 
 const AboutMe = () => {
   const { translate } = useTranslate();
@@ -11,9 +12,7 @@ const AboutMe = () => {
       id="about"
       className="description prose prose-neutral dark:prose-invert"
     >
-      <div className="title font-bold text-2xl text-black dark:text-white">
-        {translate('about')}
-      </div>
+      <Title text={translate('about')} />
       {data &&
         data.map((line, index) => {
           return <p key={index}>{line}</p>;

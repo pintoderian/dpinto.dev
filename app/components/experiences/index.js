@@ -2,6 +2,7 @@
 
 import useTranslate from '@/hooks/useTranslate';
 import Resume from './_children/resume';
+import Title from '../title';
 
 const Experiences = () => {
   const { translate } = useTranslate();
@@ -9,9 +10,7 @@ const Experiences = () => {
 
   return (
     <section id="experience">
-      <div className="title font-bold text-2xl text-black dark:text-white my-5">
-        {translate('experience')}
-      </div>
+      <Title className="my-5" text={translate('experience')} />
       <div className="flex flex-col gap-4 border-l border-neutral-100 dark:border-neutral-800">
         {data &&
           data.map((experience, index) => {

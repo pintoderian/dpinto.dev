@@ -30,11 +30,11 @@ const Menu = ({ className = 'flex-col md:flex-row' }) => {
           {translate('experience')}
         </Link>
       </li>
-      <li className={activeClass('proyects')}>
+      {/*<li className={activeClass('proyects')}>
         <Link href="#proyects" onClick={() => setActive('proyects')}>
           {translate('proyects')}
         </Link>
-      </li>
+      </li>*/}
       <li className={activeClass('skills')}>
         <Link href="#skills" onClick={() => setActive('skills')}>
           {translate('skills')}
