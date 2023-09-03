@@ -5,6 +5,7 @@ import Sidebar from './components/sidebar';
 import AboutMe from './components/about-me';
 import Experiences from './components/experiences';
 import Skills from './components/skills';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           <Skills />
         </div>
       </main>
-      <footer></footer>
+      <Footer />
     </>
   );
 }
