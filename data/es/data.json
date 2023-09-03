@@ -1,0 +1,23 @@
+{
+  "about": "Acerca de",
+  "experience": "Experiencia",
+  "proyects": "Proyectos",
+  "skills": "Habilidades",
+  "resume": "Busco desafíos para crecer profesionalmente y colaborar en proyectos web sólidos.",
+  "aboutme": [
+    "Soy un apasionado desarrollador de software especializado en tecnologías avanzadas como Git, React, Node, Typescript, Tailwind y PHP. Con amplia experiencia en la creación de aplicaciones web sólidas y eficientes, me destaco por mi enfoque en la calidad del código.",
+    "Si estás buscando elevar tus proyectos al siguiente nivel, de contribuir con mi experiencia y entusiasmo."
+  ],
+  "experiences": [
+    {
+      "title": "Desarrollador FullStack - Senior",
+      "company": "El Universo",
+      "employmentStatus": "Jornada completa",
+      "date": "sep.2021 - actualidad",
+      "country": "Ecuador",
+      "resume": "Desarrollé componentes React con ARC PUBLISHING, Next.js, y tailwindcss, además de configurar servidores en Nginx y migrar sitios a Digital Ocean. También gestioné la integración de DFP con Piano y desarrollé APIs con Express y Typescript.",
+      "description": "\n<ul>\n<li>Desarrollo de componentes en React con ARC PUBLISHING para eluniverso.com</li>\n<li>Creación de micrositios con Next.js y tailwindcss</li>\n<li>Adaptación de componentes con tailwindcss para mejorar la experiencia de usuario</li>\n<li>Implementación de metodología SCRUM para el despliegue de tareas</li>\n<li>Configuración y mantenimiento de servidores utilizando Nginx</li>\n<li>Migración de sitios web a Digital Ocean para mejorar la escalabilidad y eficiencia</li>\n<li>Integración de DoubleClick for Publishers (DFP) con Piano y mantenimiento de módulos</li>\n<li>publicitarios</li>\n<li>Desarrollo de APIs con Express, Typescript, Jest, Husky y Prettier</li>\n<li>Implementación de Directus Headles CMS para optimizar los procesos empresariales de la compañía</li>\n</ul>\n",
+      "aptitudes": "React.js,TypeScript,Node.js,Next.js,Tailwind CSS,Arc Publishing,PHP,Laravel,JavaScript,Git,Wordpress"
+    }
+  ]
+}
