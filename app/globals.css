@@ -11,3 +11,11 @@ html {
   margin: 0;
   padding-left: 0;
 }
+
+.social-link {
+  @apply bg-gray-200 rounded-lg dark:bg-neutral-800 flex flex-row justify-center gap-2 items-center py-2 px-3 ring-gray-300 transition-all;
+}
+
+.social-link:hover {
+  @apply ring-2;
+}

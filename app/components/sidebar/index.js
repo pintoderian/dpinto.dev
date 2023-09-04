@@ -3,8 +3,9 @@
 import useScroll from '@/hooks/useScroll';
 import useTranslate from '@/hooks/useTranslate';
 import { useEffect, useState } from 'react';
-import Menu from './header/_children/menu';
-import { IconMenu } from './icons';
+import Menu from '../header/_children/menu';
+import { IconMenu } from '../icons';
+import Social from './_children/social';
 
 const Sidebar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -50,6 +51,7 @@ const Sidebar = () => {
             {translate('resume')}
           </p>
         </div>
+        <Social />
       </div>
     </aside>
   );
