@@ -5,7 +5,7 @@ import { useMenuStore } from '@/store/menu';
 import Link from 'next/link';
 import { useCallback } from 'react';
 
-const Menu = ({ className = 'flex-col md:flex-row' }) => {
+const Menu = ({ className }) => {
   const { active, setActive } = useMenuStore();
   const { translate } = useTranslate();
 
@@ -19,7 +19,7 @@ const Menu = ({ className = 'flex-col md:flex-row' }) => {
   );
 
   return (
-    <ul className={`flex gap-4 ${className}`}>
+    <ul className={`gap-4 ${className}`}>
       <li className={activeClass('about')}>
         <Link href="#about" onClick={() => setActive('about')}>
           {translate('about')}

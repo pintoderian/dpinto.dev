@@ -34,7 +34,7 @@ const Sidebar = () => {
             </button>
             {openMenu && (
               <div className="absolute top-14 bg-gray-200 dark:bg-neutral-800 p-4 rounded-lg">
-                <Menu className="flex-col" />
+                <Menu className="flex flex-col" />
               </div>
             )}
           </div>
