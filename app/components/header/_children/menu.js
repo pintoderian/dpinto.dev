@@ -2,7 +2,6 @@
 
 import useTranslate from '@/hooks/useTranslate';
 import { useMenuStore } from '@/store/menu';
-import Link from 'next/link';
 import { useCallback } from 'react';
 
 const Menu = ({ className }) => {
@@ -18,27 +17,33 @@ const Menu = ({ className }) => {
     [active]
   );
 
+  const handleAction = useCallback(
+    (value) => {
+      setActive(value);
+      const element = document?.getElementById(value);
+      element?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    },
+    [setActive]
+  );
+
   return (
     <ul className={`gap-4 ${className}`}>
       <li className={activeClass('about')}>
-        <Link href="#about" onClick={() => setActive('about')}>
+        <button onClick={() => handleAction('about')}>
           {translate('about')}
-        </Link>
+        </button>
       </li>
       <li className={activeClass('experience')}>
-        <Link href="#experience" onClick={() => setActive('experience')}>
+        <button onClick={() => handleAction('experience')}>
           {translate('experience')}
-        </Link>
+        </button>
       </li>
-      {/*<li className={activeClass('proyects')}>
-        <Link href="#proyects" onClick={() => setActive('proyects')}>
-          {translate('proyects')}
-        </Link>
-      </li>*/}
       <li className={activeClass('skills')}>
-        <Link href="#skills" onClick={() => setActive('skills')}>
+        <button onClick={() => handleAction('skills')}>
           {translate('skills')}
-        </Link>
+        </button>
       </li>
     </ul>
   );
