@@ -1,12 +1,33 @@
 'use client';
 
+import useScroll from '@/hooks/useScroll';
 import useTranslate from '@/hooks/useTranslate';
 import { useMenuStore } from '@/store/menu';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 const Menu = ({ className }) => {
   const { active, setActive } = useMenuStore();
   const { translate } = useTranslate();
+  const { isScrolledIntoView } = useScroll();
+
+  const scrolledActive = useCallback(() => {
+    const isScrolledAbout = isScrolledIntoView('about');
+    const isScrolledSkills = isScrolledIntoView('skills');
+    if (isScrolledAbout) {
+      setActive('about');
+    } else if (!isScrolledAbout && !isScrolledSkills) {
+      setActive('experience');
+    } else if (isScrolledSkills) {
+      setActive('skills');
+    }
+  }, [setActive, isScrolledIntoView]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrolledActive);
+    return () => {
+      window.removeEventListener('scroll', scrolledActive);
+    };
+  }, [scrolledActive]);
 
   const activeClass = useCallback(
     (value) => {
