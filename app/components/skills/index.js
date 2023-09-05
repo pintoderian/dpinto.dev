@@ -16,7 +16,7 @@ const SkillSection = () => {
             const Icon = skill.icon;
             return (
               <div
-                className="bg-gray-200 rounded-lg dark:bg-neutral-800 flex flex-col justify-center gap-2 w-full items-center py-3"
+                className="rounded-lg border-neutral-100 dark:border-neutral-800 border flex flex-col justify-center gap-2 w-full items-center py-3"
                 key={index}
               >
                 <i className="text-2xl">
