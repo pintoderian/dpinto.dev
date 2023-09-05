@@ -1,5 +1,6 @@
 'use client';
 
+import useMenu from '@/hooks/useMenu';
 import useTranslate from '@/hooks/useTranslate';
 import { useEffect } from 'react';
 
