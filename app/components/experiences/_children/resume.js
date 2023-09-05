@@ -19,7 +19,7 @@ const Resume = ({ text, textLarge }) => {
       )}
       <div className="flex w-full justify-end">
         <button
-          className="border-neutral-100 dark:border-neutral-800 border text-sm px-2 py-1 rounded-lg hover:ring-2 ring-neutral-200 dark:ring-gray-300 transition-all"
+          className="bg-gray-200 rounded-lg dark:bg-neutral-800 text-sm px-2 py-1 hover:ring-2 ring-neutral-200 dark:ring-gray-300 transition-all"
           onClick={() => setOpen(!open)}
         >
           {translate('readmore')}
