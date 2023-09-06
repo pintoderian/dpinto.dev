@@ -12,7 +12,7 @@ const Summary = ({ text, activities = [] }) => {
       {!open ? (
         <p className="experience-content animate-fade-in-up">{text}</p>
       ) : (
-        <ul>
+        <ul className="animate-fade-in-up">
           {activities.length >= 1 &&
             activities.map((activity, index) => {
               return <li key={index}>{activity}</li>;
