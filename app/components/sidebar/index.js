@@ -48,7 +48,7 @@ const Sidebar = () => {
             {translate('badge')}
           </h2>
           <p className="prose prose-neutral dark:prose-invert">
-            {translate('resume')}
+            {translate('summary')}
           </p>
         </div>
         <Social />
