@@ -1,7 +1,7 @@
 'use client';
 
 import useTranslate from '@/hooks/useTranslate';
-import Resume from './_children/resume';
+import Summary from './_children/summary';
 import Title from '../title';
 
 const Experiences = () => {
@@ -30,9 +30,9 @@ const Experiences = () => {
                   <span className="text-neutral-700 dark:text-neutral-400 text-sm">
                     {experience.date}
                   </span>
-                  <Resume
-                    text={experience.resume}
-                    textLarge={experience.description}
+                  <Summary
+                    text={experience.summary}
+                    activities={experience.activities}
                   />
                 </div>
               </div>

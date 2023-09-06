@@ -4,7 +4,7 @@
   "proyects": "Proyectos",
   "skills": "Habilidades",
   "badge": "Desarrollador Full Stack",
-  "resume": "Busco desafíos para crecer profesionalmente y colaborar en proyectos web sólidos.",
+  "summary": "Busco desafíos para crecer profesionalmente y colaborar en proyectos web sólidos.",
   "aboutme": [
     "Soy un apasionado desarrollador de software especializado en tecnologías avanzadas como Git, React, Node, Typescript, Tailwind y PHP. Con amplia experiencia en la creación de aplicaciones web sólidas y eficientes, me destaco por mi enfoque en la calidad del código.",
     "Si estás buscando llevar tus proyectos al siguiente nivel y beneficiarte de mi experiencia, estoy aquí para ayudarte."
@@ -19,32 +19,67 @@
       "company": "El Universo",
       "employmentStatus": "Jornada completa",
       "date": "sep.2021 - actualidad",
-      "resume": "Desarrollé componentes React para ARC PUBLISHING, además de configurar servidores en Nginx y migrar sitios a Digital Ocean. También gestioné la integración de DFP con Piano y desarrollé APIs con Express y Typescript.",
-      "description": "\n<ul>\n<li>Desarrollo de componentes en React con ARC PUBLISHING para eluniverso.com</li>\n<li>Creación de micrositios con Next.js y tailwindcss</li>\n<li>Adaptación de componentes con tailwindcss para mejorar la experiencia de usuario</li>\n<li>Implementación de metodología SCRUM para el despliegue de tareas</li>\n<li>Configuración y mantenimiento de servidores utilizando Nginx</li>\n<li>Migración de sitios web a Digital Ocean para mejorar la escalabilidad y eficiencia</li>\n<li>Integración de DoubleClick for Publishers (DFP) con Piano y mantenimiento de módulos publicitarios</li>\n<li>Desarrollo de APIs con Express, Typescript, Jest, Husky y Prettier</li>\n<li>Implementación de Directus Headles CMS para optimizar los procesos empresariales de la compañía</li>\n</ul>\n"
+      "summary": "Desarrollé componentes React para ARC PUBLISHING, además de configurar servidores en Nginx y migrar sitios a Digital Ocean. También gestioné la integración de DFP con Piano y desarrollé APIs con Express y Typescript.",
+      "activities": [
+        "Desarrollé componentes en React con ARC PUBLISHING para eluniverso.com",
+        "Creé micrositios con Next.js y tailwindcss",
+        "Adapté componentes con tailwindcss para mejorar la experiencia de usuario",
+        "Implementé metodología SCRUM para el despliegue de tareas",
+        "Configuré y mantuve servidores utilizando Nginx",
+        "Migré sitios web a Digital Ocean para mejorar la escalabilidad y eficiencia",
+        "Integré DoubleClick for Publishers (DFP) con Piano y mantuve módulos publicitarios",
+        "Desarrollé APIs con Express, Typescript, Jest, Husky y Prettier",
+        "Implementé Directus Headles CMS para optimizar los procesos empresariales de la compañía"
+      ]
     },
     {
       "title": "Desarrollador FullStack - Senior",
       "company": "Ecuavisa",
       "employmentStatus": "Jornada completa",
       "date": "oct. 2020 - sept. 2021",
-      "resume": "Lideré la migración del CMS del sitio web www.ecuavisa.com de Drupal a IterCMS de Protectmedia, garantizando la continuidad del sitio. Desarrollé módulos personalizados, integré Mediastream y optimicé el rendimiento y SEO del sitio. También gestioné usuarios y servidores para mantener la operación sin interrupciones.",
-      "description": "<ul>\n<li>Lider&eacute; la migraci&oacute;n del CMS del sitio web www.ecuavisa.com de Drupal a (IterCMS) Protectmedia, garantizando la continuidad del sitio web sin interrupciones significativas.</li>\n<li>Proporcion&eacute; soporte al personal de redacci&oacute;n, asegurando que los problemas t&eacute;cnicos fueran resueltos de manera eficiente y oportuna.</li>\n<li>Desarroll&eacute; m&oacute;dulos personalizados para mejorar la funcionalidad del sitio web de Ecuavisa y asegurar que cumpla con las necesidades del negocio.</li>\n<li>Integr&eacute; la plataforma de videos Mediastream en el CMS para brindar una experiencia de usuario mejorada.</li>\n<li>Dise&ntilde;&eacute; y desarroll&eacute; micrositios dentro del CMS para promocionar eventos y campa&ntilde;as de marketing espec&iacute;ficos.</li>\n<li>Gestion&eacute; los usuarios en el CMS para garantizar el acceso apropiado y la seguridad de los datos.</li>\n<li>Optimic&eacute; la velocidad del sitio web y mejor&eacute; su posicionamiento en Google a trav&eacute;s de estrategias de SEO efectivas.</li>\n<li>Correg&iacute; el c&oacute;digo de las plantillas AMP para mejorar la velocidad de carga en dispositivos m&oacute;viles.</li>\n<li>Administr&eacute; los servidores para levantar distintas APIs y m&oacute;dulos personalizados y garantizar la continuidad de la operaci&oacute;n del sitio web.</li>\n</ul>"
+      "summary": "Lideré la migración del CMS del sitio web www.ecuavisa.com de Drupal a IterCMS de Protectmedia, garantizando la continuidad del sitio. Desarrollé módulos personalizados, integré Mediastream y optimicé el rendimiento y SEO del sitio. También gestioné usuarios y servidores para mantener la operación sin interrupciones.",
+      "activities": [
+        "Lideré la migración del CMS del sitio web www.ecuavisa.com de Drupal a (IterCMS) Protectmedia, garantizando la continuidad del sitio web sin interrupciones significativas.",
+        "Proporcioné soporte al personal de redacción, asegurando que los problemas técnicos fueran resueltos de manera eficiente y oportuna.",
+        "Desarrollé módulos personalizados para mejorar la funcionalidad del sitio web de Ecuavisa y asegurar que cumpla con las necesidades del negocio.",
+        "Integré la plataforma de videos Mediastream en el CMS para brindar una experiencia de usuario mejorada.",
+        "Diseñé y desarrollé micrositios dentro del CMS para promocionar eventos y campañas de marketing específicos.",
+        "Gestioné los usuarios en el CMS para garantizar el acceso apropiado y la seguridad de los datos.",
+        "Optimicé la velocidad del sitio web y mejoré su posicionamiento en Google a través de estrategias de SEO efectivas.",
+        "Corregí el código de las plantillas AMP para mejorar la velocidad de carga en dispositivos móviles.",
+        "Administré los servidores para levantar distintas APIs y módulos personalizados y garantizar la continuidad de la operación del sitio web."
+      ]
     },
     {
       "title": "Líder de Proyectos",
       "company": "SV Technology",
       "employmentStatus": "Jornada completa",
       "date": "mar. 2020 - sept. 2020",
-      "resume": "Desarrollé sistemas de facturación electrónica con Laravel (PHP) y Vue.js, integrados con SAP Business One para una gestión contable eficiente. Además, construí un sistema de nómina con las mismas tecnologías para simplificar los pagos de empleados. Realicé migraciones de bases de datos en MySQL, SQLServer y PostgreSQL para garantizar la integridad de los datos, supervisé implementaciones y pruebas, brindé soporte a usuarios, y desarrollé módulos personalizados para mejorar la eficiencia y productividad de la empresa.",
-      "description": "<ul>\n<li>Desarrollo de sistemas de facturaci&oacute;n electr&oacute;nica con Laravel (PHP) y Vue.js, integr&aacute;ndolo con SAP Business One para una gesti&oacute;n m&aacute;s eficiente de la contabilidad empresarial</li>\n<li>Desarrollo de sistema de n&oacute;mina utilizando Laravel (PHP) y Vue.js para facilitar el c&aacute;lculo y procesamiento de los pagos de los empleados</li>\n<li>Realizaci&oacute;n de migraciones de base de datos en distintos sistemas como MySQL, SQLServer y PostgreSQL, para asegurar la integridad y seguridad de los datos durante el proceso</li>\n<li>Seguimiento de implementaci&oacute;n de software y pruebas para garantizar la calidad y el correcto funcionamiento del producto final</li>\n<li>Soporte a usuarios en cuanto a software se refiere, brindando soluciones y asistencia t&eacute;cnica en caso de fallos o errores en los sistemas</li>\n<li>Elaboraci&oacute;n de m&oacute;dulos personalizados para mejorar los procesos de la empresa y agilizar el flujo de trabajo de los distintos departamentos, optimizando la eficiencia y productividad de la empresa.</li>\n</ul>"
+      "summary": "Desarrollé sistemas de facturación electrónica con Laravel (PHP) y Vue.js, integrados con SAP Business One para una gestión contable eficiente. Además, construí un sistema de nómina con las mismas tecnologías para simplificar los pagos de empleados. Realicé migraciones de bases de datos en MySQL, SQLServer y PostgreSQL para garantizar la integridad de los datos, supervisé implementaciones y pruebas, brindé soporte a usuarios, y desarrollé módulos personalizados para mejorar la eficiencia y productividad de la empresa.",
+      "activities": [
+        "Desarrollé sistemas de facturación electrónica con Laravel (PHP) y Vue.js, integrándolos con SAP Business One para una gestión más eficiente de la contabilidad empresarial.",
+        "Desarrollé un sistema de nómina utilizando Laravel (PHP) y Vue.js para facilitar el cálculo y procesamiento de los pagos de los empleados.",
+        "Realicé migraciones de base de datos en distintos sistemas como MySQL, SQLServer y PostgreSQL, para asegurar la integridad y seguridad de los datos durante el proceso.",
+        "Realicé seguimiento de la implementación de software y pruebas para garantizar la calidad y el correcto funcionamiento del producto final.",
+        "Brindé soporte a usuarios en cuanto a software se refiere, ofreciendo soluciones y asistencia técnica en caso de fallos o errores en los sistemas.",
+        "Elaboré módulos personalizados para mejorar los procesos de la empresa y agilizar el flujo de trabajo de los distintos departamentos, optimizando la eficiencia y productividad de la empresa."
+      ]
     },
     {
       "title": "Desarrollador FullStack",
       "company": "Orodelti",
       "employmentStatus": "Jornada completa",
       "date": "sept. 2018 - mar. 2020",
-      "resume": "Desarrollé plataformas empresariales con PHP, Vue.js, Node.js, JQuery, HTML5, Bootstrap 4, Laravel y .Net. También creé aplicaciones para Android, realicé análisis de datos y generación de informes para la toma de decisiones, gestioné migraciones de bases de datos con aseguramiento de integridad, supervisé implementaciones de software y pruebas de calidad, proporcioné soporte técnico a usuarios y administré bases de datos con sistemas como PostgreSQL, SQLServer y MYSQL para garantizar su funcionamiento óptimo.",
-      "description": "<ul>\n<li>Desarrollo de plataformas empresariales utilizando PHP, Vuejs, Nodejs, JQuery, HTML5, Bootstrap 4, Laravel y .Net</li>\n<li>Creaci&oacute;n de aplicaciones para dispositivos m&oacute;viles Android</li>\n<li>An&aacute;lisis de datos y generaci&oacute;n de informes para la toma de decisiones empresariales</li>\n<li>Migraci&oacute;n de base de datos y aseguramiento de la integridad de los datos durante el proceso</li>\n<li>Seguimiento de implementaci&oacute;n de software y pruebas para garantizar la calidad del producto final</li>\n<li>Soporte a usuarios en cuanto a software se refiere, brindando soluciones a los problemas t&eacute;cnicos que puedan presentar</li>\n<li>Administraci&oacute;n de base de datos utilizando sistemas como PostgreSQL, SQLServer y MYSQL, asegurando el correcto funcionamiento y optimizaci&oacute;n de las consultas.</li>\n</ul>"
+      "summary": "Desarrollé plataformas empresariales con PHP, Vue.js, Node.js, JQuery, HTML5, Bootstrap 4, Laravel y .Net. También creé aplicaciones para Android, realicé análisis de datos y generación de informes para la toma de decisiones, gestioné migraciones de bases de datos con aseguramiento de integridad, supervisé implementaciones de software y pruebas de calidad, proporcioné soporte técnico a usuarios y administré bases de datos con sistemas como PostgreSQL, SQLServer y MYSQL para garantizar su funcionamiento óptimo.",
+      "activities": [
+        "Desarrollé plataformas empresariales utilizando PHP, Vue.js, Node.js, JQuery, HTML5, Bootstrap 4, Laravel y .Net.",
+        "Creé aplicaciones para dispositivos móviles Android.",
+        "Realicé análisis de datos y generé informes para la toma de decisiones empresariales.",
+        "Migré bases de datos y aseguré la integridad de los datos durante el proceso.",
+        "Hice seguimiento de la implementación de software y pruebas para garantizar la calidad del producto final.",
+        "Brindé soporte a usuarios en cuanto a software se refiere, ofreciendo soluciones a los problemas técnicos que pudieran presentar.",
+        "Administré bases de datos utilizando sistemas como PostgreSQL, SQLServer y MYSQL, asegurando el correcto funcionamiento y optimización de las consultas."
+      ]
     }
   ]
 }

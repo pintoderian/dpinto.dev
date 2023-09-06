@@ -3,7 +3,7 @@
 import useTranslate from '@/hooks/useTranslate';
 import { useState } from 'react';
 
-const Resume = ({ text, textLarge }) => {
+const Summary = ({ text, activities = [] }) => {
   const { translate } = useTranslate();
   const [open, setOpen] = useState(false);
 
@@ -12,10 +12,12 @@ const Resume = ({ text, textLarge }) => {
       {!open ? (
         <p className="experience-content animate-fade-in-up">{text}</p>
       ) : (
-        <div
-          className="experience-content animate-fade-in-up"
-          dangerouslySetInnerHTML={{ __html: textLarge }}
-        ></div>
+        <ul>
+          {activities.length >= 1 &&
+            activities.map((activity, index) => {
+              return <li key={index}>{activity}</li>;
+            })}
+        </ul>
       )}
       <div className="flex w-full justify-end">
         <button
@@ -29,4 +31,4 @@ const Resume = ({ text, textLarge }) => {
   );
 };
 
-export default Resume;
+export default Summary;
