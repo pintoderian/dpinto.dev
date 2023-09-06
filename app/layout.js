@@ -25,10 +25,10 @@ export const metadata = {
     default: 'Derian Pinto',
     template: '%s | Derian Pinto'
   },
-  description: 'Developer and gamer.',
+  description: 'FullStack Developer.',
   openGraph: {
     title: 'Derian Pinto',
-    description: 'Developer and gamer.',
+    description: 'FullStack Developer.',
     url: 'https://dpinto.dev',
     siteName: 'Derian Pinto',
     locale: 'en-US',
