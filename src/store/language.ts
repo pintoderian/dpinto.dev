@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Dictionary } from "../types/dictionary";
+import type { Dictionary, Project } from "../types/dictionary";
 import spanish from "../dictionaries/es.json";
 
 interface LanguageState {
@@ -11,7 +11,12 @@ interface LanguageState {
 
 export const useLanguageStore = create<LanguageState>((set, get) => ({
   language: "ES",
-  data: spanish,
+  data: {
+    ...spanish,
+    projects: spanish.projects.map((project: any) => ({
+      ...project
+    })) as Project[]
+  },
   setLanguage: (value: string) =>
     set((state: LanguageState) => ({ ...state, language: value })),
   setData: (value: Dictionary) =>
