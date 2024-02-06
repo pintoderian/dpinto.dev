@@ -22,9 +22,9 @@ export default function Experience() {
       {experiences.map((experience, index) => {
         const Icon = icons[experience.icon];
         return (
-          <li key={`experience-${index}`} className="mb-8">
+          <li key={`experience-${index}`} className="lg:mb-4">
             <div className="relative pb-12 grid md:grid-cols-5 md:gap-8 md:space-x-4">
-              <div className="relative pb-12 md:col-span-2">
+              <div className="relative pb-6 lg:pb-12 md:col-span-2">
                 <div className="flex flex-row items-start gap-4">
                   <div className="mt-1.5">
                     <Icon />
