@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --nav: rgb(209 213 219 / 0.6);
+  }
+  .dark {
+    --nav: rgb(120, 119, 198, 0.3);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.experience-content ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+header nav {
+  animation: nav-shadown 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+@keyframes nav-shadown {
+  to {
+    @apply shadow-lg ring-1 backdrop-blur bg-nav ring-white/10;
+  }
+}

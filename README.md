@@ -22,3 +22,7 @@
 <br/>
 
 Thank you for visiting my personal website. I hope you enjoy exploring my work and getting to know more about me!
+
+<br/>
+
+Inspired by the <a href="https://github.com/midudev/porfolio.dev">midudev repository</a>
