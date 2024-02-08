@@ -18,7 +18,12 @@ const BtnLanguage = () => {
   };
 
   return (
-    <Button type="button" variant="ghost" onClick={handleLanguage}>
+    <Button
+      aria-label="Toggle Language"
+      type="button"
+      variant="ghost"
+      onClick={handleLanguage}
+    >
       {language === "ES" ? <IconEC /> : <IconEEUU />}
     </Button>
   );

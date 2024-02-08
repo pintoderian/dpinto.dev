@@ -37,7 +37,7 @@ const TAGS = {
   },
   ASTRO: {
     name: "Astro",
-    class: "bg-orange-600 text-white",
+    class: "bg-orange-700 text-white",
     icon: IconRocket,
     iconClass: "text-white"
   },
