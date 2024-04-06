@@ -101,20 +101,6 @@
       ]
     },
     {
-      "title": "Mi Carta Numerológica",
-      "image": "/projects/micartanumerologica.webp",
-      "description": "Platform designed for those who want to explore their destiny through numerology. It offers a complete numerology chart system that allows users to discover new possibilities to expand their businesses.",
-      "link": "https://micartanumerologica.com/",
-      "technologies": [
-        "ASTRO",
-        "NEXTJS",
-        "TAILWINDCSS",
-        "DIRECTUS",
-        "AWS",
-        "TYPESCRIPT"
-      ]
-    },
-    {
       "title": "Next Directus Auth TS",
       "image": "/projects/nextjs-ts.webp",
       "description": "This project is a starting point for building a modern web dashboard using a robust technology stack. It provides you with the basic structure and tools necessary to kickstart the development of your own dashboard application.",
