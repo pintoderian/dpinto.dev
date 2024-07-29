@@ -1,24 +1,32 @@
 import type { Metadata } from "next";
-import { Onest as FontSans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import { classnames } from "@/utils/classnames";
-import { Providers } from "./provider";
-import dictionary from "@/dictionaries/es.json";
+import { classnames } from "@/lib/classnames";
+import data from "@/content/data.json";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans"
+export const fontSans = localFont({
+  src: "../fonts/HubotSans.woff2",
+  variable: "--font-sans",
+  weight: "400 900",
+  display: "swap"
+});
+
+export const fontHolimount = localFont({
+  src: "../fonts/Holimount.otf",
+  variable: "--font-holimount",
+  style: "normal",
+  display: "swap"
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dpinto.dev"),
   title: {
-    default: `Derian Pinto - ${dictionary.badge}`,
+    default: `Derian Pinto - ${data.badge}`,
     template: "%s | Derian Pinto"
   },
   description: "FullStack Developer.",
   openGraph: {
-    title: `Derian Pinto - ${dictionary.badge}`,
+    title: `Derian Pinto - ${data.badge}`,
     description: "FullStack Developer.",
     url: "https://dpinto.dev",
     siteName: "Derian Pinto",
@@ -48,21 +56,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" className="dark" suppressHydrationWarning>
       <body
         className={classnames(
-          "min-h-screen font-sans antialiased relative text-black dark:text-white overflow-x-hidden bg-white dark:bg-neutral-950",
-          fontSans.variable
+          "min-h-screen font-sans antialiased relative text-blue-100/70 overflow-x-hidden bg-neutral-900",
+          fontSans.variable,
+          fontHolimount.variable
         )}
       >
-        <div
-          className={classnames(
-            "absolute top-0 z-[-2] h-screen w-screen",
-            "dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]",
-            "bg-[radial-gradient(100%_50%_at_50%_0%,rgba(120,119,198,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"
-          )}
-        ></div>
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );

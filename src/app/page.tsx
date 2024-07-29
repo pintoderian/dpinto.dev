@@ -1,52 +1,46 @@
-"use client";
-
-import { Fragment } from "react";
-import SectionContainer from "./components/section-container";
-import Hero from "./components/hero";
-import {
-  IconBriefcase,
-  IconSourceCode,
-  IconUserSquareRounded
-} from "@tabler/icons-react";
-import AboutMe from "./components/about-me";
-import Experience from "./components/experience";
-import Projects from "./components/projects";
-import { useTranslate } from "@/hooks/useTranslate";
+import Badge from "@/components/badge";
+import Experiences from "@/components/experiences";
+import { Header } from "@/components/header";
+import { Nav } from "@/components/header/nav";
+import { IntersectionSwap } from "@/components/intersection-swap";
+import HomeLayout from "@/components/layouts/home";
+import Posts from "@/components/posts";
+import { ProfileImageLarge } from "@/components/profile-image";
+import Projects from "@/components/projects";
 
 export default function Home() {
-  const { translateArray } = useTranslate();
-  const keywords = ["experience", "project", "about"];
-  const [experience, project, about] = translateArray(keywords);
-
   return (
-    <Fragment>
-      <SectionContainer className="py-16 md:py-36">
-        <Hero />
-      </SectionContainer>
-      <div className="space-y-24">
-        <SectionContainer id="experience">
-          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-            <IconBriefcase size={30} />
-            {experience}
-          </h2>
-          <Experience />
-        </SectionContainer>
-        <SectionContainer id="project">
-          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
-            <IconSourceCode size={30} />
-            {project}
-          </h2>
-          <Projects />
-        </SectionContainer>
+    <HomeLayout>
+      <IntersectionSwap nav={<Header />}>
+        <div className="space-y-8">
+          <div className="flex items-center space-x-6">
+            <ProfileImageLarge />
 
-        <SectionContainer id="about">
-          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
-            <IconUserSquareRounded size={30} />
-            {about}
-          </h2>
-          <AboutMe />
-        </SectionContainer>
+            <div className="mt-2 relative">
+              <h1 className="text-3xl font-semibold leading-none text-blue-100/90">
+                <span>Derian Pinto</span>
+              </h1>
+              <h2 className="mt-2 items-center space-y-2 text-lg font-medium leading-none text-blue-100/50 lg:mt-0 lg:flex lg:space-y-0 lg:space-x-2">
+                <div className="whitespace-nowrap py-1">
+                  Desarrollador Full Stack
+                </div>
+                <Badge>Disponible para trabajar</Badge>
+              </h2>
+            </div>
+          </div>
+          <p className="text-xl text-blue-100/90 [&>b]:text-blue-600 [&>b]:font-semibold">
+            +6 años de experiencia.{" "}
+            <b>Ingeniero de Sistemas y Desarrollador Full Stack</b> de Ecuador
+            🇪🇨. Especializado en el desarrollo de aplicaciones web únicas.
+          </p>
+          <Nav />
+        </div>
+      </IntersectionSwap>
+      <div className="mt-24 space-y-8">
+        <Projects />
+        <Experiences />
+        <Posts />
       </div>
-    </Fragment>
+    </HomeLayout>
   );
 }

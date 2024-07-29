@@ -4,10 +4,6 @@
 
 @layer base {
   :root {
-    --nav: rgb(209 213 219 / 0.6);
-  }
-  .dark {
-    --nav: rgb(120, 119, 198, 0.3);
   }
 }
 
@@ -15,20 +11,27 @@ html {
   scroll-behavior: smooth;
 }
 
-.experience-content ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
+.gradient-background {
+  background: radial-gradient(
+    48.42% 48.42% at 49.41% 51.58%,
+    rgba(46, 88, 255, 0.34) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: -1;
+  width: 100%;
+  max-width: 1064px;
+  height: 100%;
+  max-height: 1064px;
+  position: absolute;
+  top: -3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-header nav {
-  animation: nav-shadown 1s linear both;
-  animation-timeline: scroll();
-  animation-range: 0 100px;
-}
-
-@keyframes nav-shadown {
-  to {
-    @apply shadow-lg ring-1 backdrop-blur bg-nav ring-white/10;
-  }
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply scroll-mt-24;
 }
