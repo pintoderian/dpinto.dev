@@ -31,20 +31,22 @@ export default async function Experiences() {
 
           return (
             <Link
-              className="block group overflow-hidden rounded-2xl bg-white/5 p-7 shadow-surface-elevation-low transition duration-300 hover:bg-white/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
+              className="block group overflow-hidden rounded-lg bg-white/5 p-5 md:p-7 shadow-surface-elevation-low transition duration-300 hover:bg-white/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
               key={`experience-${index}`}
               href={`/experiencia/${experience.slug}`}
             >
               <div className="flex flex-row gap-x-4">
-                <div className="w-1/12">
-                  <div className="flex items-center w-[45px] h-[45px] bg-neutral-900 rounded-xl group-hover:shadow-lg group-hover:shadow-blue-900/60 ring-2 ring-blue-400/20">
+                <div className="w-[12%] md:w-1/12">
+                  <div className="flex items-center w-[45px] h-[45px] bg-neutral-900 rounded-lg group-hover:shadow-lg group-hover:shadow-blue-900/60 ring-2 ring-blue-400/20">
                     <Icon />
                   </div>
                 </div>
-                <div className="w-11/12">
+                <div className="w-[88%] md:w-11/12">
                   <div className="flex flex-col">
                     <div className="flex flex-row justify-between items-center">
-                      <h4 className="text-lg text-blue-100/90">{job}</h4>
+                      <h3 className="text-base md:text-lg text-blue-100/90">
+                        {job}
+                      </h3>
                       <span className="text-xs">
                         <svg
                           viewBox="0 0 24 24"
@@ -58,9 +60,9 @@ export default async function Experiences() {
                         </svg>
                       </span>
                     </div>
-                    <div className="flex flex-row gap-6 items-center text-sm">
+                    <div className="flex flex-row space-x-4 divide-x-2 divide-blue-200/20 items-center text-sm">
                       <span>{company}</span>
-                      <span className="text-xs">{dateRange}</span>
+                      <span className="text-xs px-4">{dateRange}</span>
                     </div>
                   </div>
                 </div>

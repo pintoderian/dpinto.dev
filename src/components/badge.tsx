@@ -1,7 +1,10 @@
 export default function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-1 text-xs px-2 py-1 rounded-md bg-black text-white shadow-lg shadow-blue-900/60 ring-2 ring-blue-400/20 group-hover:shadow-xl group-hover:shadow-blue-700 group-hover:ring-blue-400/30">
-      {children}
+    <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-lg shadow-blue-900/60">
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(var(--tw-gradient-stops))] from-blue-900/60 via-blue-600 to-blue-400/20"></span>
+      <div className="rounded-full text-xs w-full px-3 py-1 bg-black text-white backdrop-blur-3xl">
+        {children}
+      </div>
     </div>
   );
 }

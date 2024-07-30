@@ -32,6 +32,7 @@ export default async function DynamicPage({
   return (
     <ContentPreview
       title={data?.title}
+      image={data?.image}
       date={data?.date}
       headings={headings}
       source={source}

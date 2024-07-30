@@ -9,19 +9,21 @@ export default async function Posts() {
   return (
     <div className="posts">
       <Subtitle text="Últimos Artículos" />
-      <div className="space-y-6">
+      <div className="divide-y-2 divide-dashed divide-blue-200/5 space-y-4 -mt-3 md:-mt-6">
         {posts?.map((post, index) => {
           const { title, dateCreated, summary } = post.entry;
 
           return (
             <Link
-              className="block group overflow-hidden rounded-2xl bg-white/5 p-7 shadow-surface-elevation-low transition duration-300 hover:bg-white/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
+              className="block group overflow-hidden rounded-lg py-5 md:py-8 shadow-surface-elevation-low transition duration-300"
               key={`post-${index}`}
               href={`/blog/${post.slug}`}
             >
               <div className="flex flex-col">
-                <div className="flex flex-row justify-between items-center">
-                  <h4 className="text-lg text-blue-100/90">{title}</h4>
+                <div className="flex flex-row justify-between items-center gap-x-2">
+                  <h4 className="text-base md:text-lg text-blue-100/90 group-hover:text-blue-600">
+                    {title}
+                  </h4>
                   <span className="text-xs">
                     <svg
                       viewBox="0 0 24 24"
@@ -35,10 +37,10 @@ export default async function Posts() {
                     </svg>
                   </span>
                 </div>
-                <span className="text-base text-blue-100/50">
+                <span className="text-sm md:text-base text-blue-100/50">
                   {formatDate(dateCreated)}
                 </span>
-                <p className="mt-4 text-base text-blue-100/70 line-clamp-3">
+                <p className="mt-4 text-sm md:text-base text-blue-100/70 line-clamp-3 group-hover:opacity-80">
                   {summary}
                 </p>
               </div>

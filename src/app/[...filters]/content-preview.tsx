@@ -7,10 +7,12 @@ import { components } from "@/lib/mdx";
 import { Heading } from "@/lib/mdx-serializer";
 import { formatDate } from "@/lib/utils";
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
+import Image from "next/image";
 
 interface MDXContentProps {
   title?: string;
   date?: string;
+  image?: string | null;
   headings?: Heading[];
   source: MDXRemoteProps;
 }
@@ -18,6 +20,7 @@ interface MDXContentProps {
 export default function ContentPreview({
   title,
   date,
+  image,
   headings,
   source
 }: MDXContentProps) {
@@ -39,6 +42,19 @@ export default function ContentPreview({
           {date && <div>{formatDate(date)}</div>}
         </div>
       </div>
+
+      {image && (
+        <div className="relative w-full h-40 pt-[52.5%]">
+          <Image
+            className="rounded-xl border-2 border-blue-100/30 object-cover"
+            fill={true}
+            src={image as string}
+            alt={`Imagen de ${title}`}
+            quality={90}
+          />
+        </div>
+      )}
+
       <MDXRemote {...source} components={components} />
 
       <div className="sticky top-6 hidden h-0 xl:!col-start-4 xl:row-start-3 xl:block">

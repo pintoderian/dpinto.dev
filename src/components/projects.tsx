@@ -25,7 +25,7 @@ export default async function Projects() {
                       {image && (
                         <Image
                           alt={`Imagen de ${title}`}
-                          className="rounded-2xl"
+                          className="rounded-lg"
                           loading="eager"
                           src={image}
                           width={475}
@@ -34,9 +34,9 @@ export default async function Projects() {
                       )}
                       <div className="py-4 tracking-wide flex justify-between items-center">
                         <div>
-                          <h2 className="text-base text-blue-100/90 font-medium mb-1">
+                          <h3 className="text-base md:text-lg text-blue-100/90 font-medium mb-1">
                             {title}
-                          </h2>
+                          </h3>
                           <div className="flex flex-row flex-wrap gap-1.5 text-xs">
                             {tags?.map((tag, index) => {
                               return (

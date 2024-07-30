@@ -110,6 +110,7 @@ export async function getDynamicData({
           title: searchExperience.entry.company,
           summary: `Experiencia de trabajo en ${searchExperience.entry.company}`,
           date: searchExperience.entry.dateStart,
+          image: null,
           content: searchExperience.entry.content
         }
       : null;
@@ -123,6 +124,7 @@ export async function getDynamicData({
           title: searchProject.entry.title,
           date: searchProject.entry.dateCreated,
           summary: searchProject.entry.summary,
+          image: searchProject.entry.image,
           content: searchProject.entry.content
         }
       : null;
@@ -136,6 +138,7 @@ export async function getDynamicData({
           title: searchPost.entry.title,
           date: searchPost.entry.dateCreated,
           summary: searchPost.entry.summary,
+          image: searchPost.entry.image,
           content: searchPost.entry.content
         }
       : null;

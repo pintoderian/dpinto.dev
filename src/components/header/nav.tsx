@@ -4,7 +4,6 @@ import {
   ChatBubbleBottomCenterTextIcon,
   GlobeAltIcon
 } from "@heroicons/react/24/solid";
-import { Github } from "@react-symbols/icons";
 import Link from "next/link";
 import React, { ElementType } from "react";
 
@@ -34,7 +33,7 @@ function NavItem({
             className={classnames(
               "rounded-lg bg-gradient-to-tl from-blue-400 to-blue-500/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1",
               {
-                "ring-[2px] ring-purple-500/30 ring-offset-1 ring-offset-black/5":
+                "ring-[2px] ring-blue-500/30 ring-offset-1 ring-offset-black/5":
                   isActive
               }
             )}
@@ -62,18 +61,6 @@ export const Nav = () => {
       <NavItem href="https://codegea.com" Icon={GlobeAltIcon} target="_blank">
         Sitio Web
       </NavItem>
-
-      <NavItem
-        href="https://codegea.com"
-        Icon={Github}
-        target="_blank"
-      ></NavItem>
-
-      <NavItem
-        href="https://codegea.com"
-        Icon={GlobeAltIcon}
-        target="_blank"
-      ></NavItem>
     </div>
   );
 };

@@ -1,6 +1,30 @@
 import { config, fields, collection } from "@keystatic/core";
 import { wrapper } from "@keystatic/core/content-components";
 
+const globalComponents = {
+  Grid: wrapper({
+    label: "Grid",
+    schema: {
+      x: fields.select({
+        label: "Type",
+        options: [
+          { label: "full", value: "full" },
+          { label: "aside", value: "aside" }
+        ],
+        defaultValue: "aside"
+      })
+    }
+  }),
+  Aside: wrapper({
+    label: "Aside",
+    schema: {
+      title: fields.text({
+        label: "Title"
+      })
+    }
+  })
+};
+
 export default config({
   storage: {
     kind: "local"
@@ -47,7 +71,11 @@ export default config({
         githubLink: fields.text({
           label: "Github Link"
         }),
-        content: fields.mdx({ label: "Content" })
+        content: fields.mdx({
+          label: "Content",
+          extension: "mdx",
+          components: globalComponents
+        })
       }
     }),
     experiences: collection({
@@ -89,7 +117,11 @@ export default config({
           ],
           defaultValue: "codegea"
         }),
-        content: fields.mdx({ label: "Content" })
+        content: fields.mdx({
+          label: "Content",
+          extension: "mdx",
+          components: globalComponents
+        })
       }
     }),
     posts: collection({
@@ -108,32 +140,15 @@ export default config({
           label: "Summary",
           multiline: true
         }),
+        image: fields.image({
+          label: "Image",
+          directory: "public/images/posts",
+          publicPath: "/images/posts/"
+        }),
         content: fields.mdx({
           label: "Content",
           extension: "mdx",
-          components: {
-            Grid: wrapper({
-              label: "Grid",
-              schema: {
-                x: fields.select({
-                  label: "Type",
-                  options: [
-                    { label: "full", value: "full" },
-                    { label: "aside", value: "aside" }
-                  ],
-                  defaultValue: "aside"
-                })
-              }
-            }),
-            Aside: wrapper({
-              label: "Aside",
-              schema: {
-                title: fields.text({
-                  label: "Title"
-                })
-              }
-            })
-          }
+          components: globalComponents
         })
       }
     })
