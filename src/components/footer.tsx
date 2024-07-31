@@ -4,7 +4,7 @@ export default function Footer() {
     <footer className="my-20">
       <div className="text-center">
         <p className="my-6 font-holimount text-5xl">Derian Pinto</p>
-        <p className="text-xs">© {year} - dpinto.dev</p>
+        <p className="text-xs">© {year} - Ecuador</p>
       </div>
     </footer>
   );

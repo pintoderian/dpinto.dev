@@ -29,6 +29,8 @@ export type PostAllProps = {
   entry: PostProps;
 };
 
+type SettingProps = Entry<(typeof keystaticConfig)["singletons"]["settings"]>;
+
 export async function getProjects({
   limit
 }: {
@@ -116,20 +118,6 @@ export async function getDynamicData({
       : null;
   }
 
-  if (category === "proyecto") {
-    const projects = await getProjects({});
-    const searchProject = projects?.find((project) => project.slug === slug);
-    return searchProject
-      ? {
-          title: searchProject.entry.title,
-          date: searchProject.entry.dateCreated,
-          summary: searchProject.entry.summary,
-          image: searchProject.entry.image,
-          content: searchProject.entry.content
-        }
-      : null;
-  }
-
   if (category === "blog") {
     const posts = await getPosts({});
     const searchPost = posts?.find((post) => post.slug === slug);
@@ -145,4 +133,9 @@ export async function getDynamicData({
   }
 
   return null;
+}
+
+export async function getSettings(): Promise<SettingProps | null> {
+  const setting = await reader.singletons.settings.read();
+  return setting;
 }

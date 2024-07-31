@@ -1,6 +1,8 @@
 import { config, fields, collection, singleton } from "@keystatic/core";
 import { block, wrapper } from "@keystatic/core/content-components";
 
+export const showAdminUI = process.env.NODE_ENV === "development";
+
 const globalComponents = {
   Grid: wrapper({
     label: "Grid",

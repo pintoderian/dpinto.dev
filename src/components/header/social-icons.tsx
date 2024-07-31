@@ -3,27 +3,39 @@ import { IconLinkedin } from "../icons";
 import { AtSymbolIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { classnames } from "@/lib/classnames";
+import { getSettings } from "@/services/database";
 
-const socialLinks = [
+type IconProp = {
+  id: string;
+  icon: any;
+};
+
+const socialIcons: IconProp[] = [
   {
-    url: "mailto:dpintoec@gmail.com",
+    id: "mail",
     icon: AtSymbolIcon
   },
   {
-    url: "https://www.linkedin.com/in/pintoderian/",
+    id: "linkedin",
     icon: IconLinkedin
   },
   {
-    url: "https://github.com/pintoderian",
+    id: "github",
     icon: Github
   }
 ];
 
-export default function SocialIcons() {
+export default async function SocialIcons() {
+  const setting = await getSettings();
+
   return (
     <div className="flex flex-row gap-x-3">
-      {socialLinks?.map((link, index) => {
-        const Icon = link.icon;
+      {setting?.socialLinks?.map((link, index) => {
+        const searchIcon = socialIcons.find(
+          (socialIcon) => socialIcon.id === link.icon
+        );
+        const Icon = searchIcon?.icon;
+
         return (
           <Link
             key={`social-${index}`}
