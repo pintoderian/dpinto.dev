@@ -1,4 +1,4 @@
-import { config, fields, collection } from "@keystatic/core";
+import { config, fields, collection, singleton } from "@keystatic/core";
 import { block, wrapper } from "@keystatic/core/content-components";
 
 const globalComponents = {
@@ -154,6 +154,74 @@ export default config({
           label: "Content",
           extension: "mdx",
           components: globalComponents
+        })
+      }
+    })
+  },
+
+  singletons: {
+    settings: singleton({
+      label: "Settings",
+      path: "src/content/settings/",
+      schema: {
+        name: fields.text({
+          label: "Name",
+          validation: { isRequired: true }
+        }),
+        job: fields.text({
+          label: "Job",
+          validation: { isRequired: true }
+        }),
+        image: fields.image({
+          label: "Image",
+          directory: "public/images/avatar",
+          publicPath: "/images/avatar/"
+        }),
+        openToWork: fields.checkbox({
+          label: "Open to Work",
+          description: "Enable badge"
+        }),
+        socialLinks: fields.array(
+          fields.object({
+            title: fields.text({ label: "Title" }),
+            url: fields.text({ label: "URL" }),
+            icon: fields.select({
+              label: "Icon",
+              options: [
+                { label: "Github", value: "github" },
+                { label: "Linkedin", value: "linkedin" },
+                { label: "Mail", value: "mail" }
+              ],
+              defaultValue: "github"
+            })
+          }),
+          {
+            label: "Link",
+            itemLabel: (props) => props.fields.title.value
+          }
+        ),
+        yearOfWork: fields.integer({
+          label: "Year of start of work",
+          description: "It is used to show the variable in the summary"
+        }),
+        summary: fields.mdx({
+          label: "Summary",
+          description: "Use :year: to show the number of years of work",
+          extension: "mdx"
+        }),
+        birthdate: fields.date({
+          label: "Birthdate",
+          description: "It is used to show the variable in the about"
+        }),
+        about: fields.mdx({
+          label: "About me",
+          description: "Use :birthdate: to display age in text",
+          extension: "mdx"
+        }),
+        aboutImage: fields.image({
+          label: "About Image",
+          directory: "public/images/about",
+          publicPath: "/images/about/"
         })
       }
     })
