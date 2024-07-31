@@ -8,12 +8,14 @@ import { classnames } from "./classnames";
 import { Grid } from "@/components/grid";
 import { Aside } from "@/components/aside";
 import { Code } from "@/components/code";
+import ButtonLinks from "@/components/button-links";
 
 export const components = {
   // Global components
   Code,
   Grid,
   Aside,
+  ButtonLinks,
   h1: (props: any) => (
     <h2
       className="relative mt-3 border-t-2 border-blue-200/5 pt-9 text-xl font-medium text-blue-200/95 sm:text-3xl"

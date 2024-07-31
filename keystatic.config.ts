@@ -1,5 +1,5 @@
 import { config, fields, collection } from "@keystatic/core";
-import { wrapper } from "@keystatic/core/content-components";
+import { block, wrapper } from "@keystatic/core/content-components";
 
 const globalComponents = {
   Grid: wrapper({
@@ -21,6 +21,21 @@ const globalComponents = {
       title: fields.text({
         label: "Title"
       })
+    }
+  }),
+  ButtonLinks: block({
+    label: "ButtonLinks",
+    schema: {
+      data: fields.array(
+        fields.object({
+          title: fields.text({ label: "Title" }),
+          url: fields.text({ label: "URL" })
+        }),
+        {
+          label: "Link",
+          itemLabel: (props) => props.fields.title.value
+        }
+      )
     }
   })
 };
@@ -64,12 +79,6 @@ export default config({
             { label: "Laravel", value: "laravel" }
           ],
           defaultValue: []
-        }),
-        externalLink: fields.text({
-          label: "External Link"
-        }),
-        githubLink: fields.text({
-          label: "Github Link"
         }),
         content: fields.mdx({
           label: "Content",

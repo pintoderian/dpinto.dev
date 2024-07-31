@@ -2,6 +2,7 @@ import { getProjects } from "@/services/database";
 import Image from "next/image";
 import Link from "next/link";
 import Subtitle from "./subtitle";
+import { IconArrow } from "./icons";
 
 export default async function Projects() {
   const projects = await getProjects({ limit: 2 });
@@ -25,11 +26,11 @@ export default async function Projects() {
                       {image && (
                         <Image
                           alt={`Imagen de ${title}`}
-                          className="rounded-lg"
-                          loading="eager"
+                          className="rounded-lg object-cover max-h-[171px]"
+                          loading="lazy"
                           src={image}
-                          width={475}
-                          height={265}
+                          width={304}
+                          height={171}
                         />
                       )}
                       <div className="py-4 tracking-wide flex justify-between items-center">
@@ -50,16 +51,7 @@ export default async function Projects() {
                             })}
                           </div>
                         </div>
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          fill="currentColor"
-                          className="text-geist-900 duration-300 ease-out group-hover:rotate-45 group-hover:text-geist-1000"
-                        >
-                          <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
-                        </svg>
+                        <IconArrow />
                       </div>
                     </div>
                   </Link>
