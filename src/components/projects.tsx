@@ -17,10 +17,10 @@ export default async function Projects() {
 
             return (
               <article
-                className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+                className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 w-full md:w-1/2"
                 key={`project-${index}`}
               >
-                <div className="hover:scale-[1.03] cursor-pointer transition-all ease-in-out duration-200">
+                <div className="hover:scale-[1.03] cursor-pointer transition-all ease-in-out duration-200 w-full">
                   <Link
                     title={title}
                     href={project.entry.link}
@@ -31,7 +31,7 @@ export default async function Projects() {
                       {image && (
                         <Image
                           alt={`Imagen de ${title}`}
-                          className="rounded-lg object-cover max-h-[171px]"
+                          className="rounded-lg w-full object-cover md:max-h-[171px]"
                           loading="lazy"
                           src={image}
                           width={304}
