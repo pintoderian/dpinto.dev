@@ -1,0 +1,16 @@
+name: Derian Pinto
+job: Desarrollador Full Stack
+image: /images/avatar/image.webp
+openToWork: true
+socialLinks:
+  - title: Correo
+    url: mailto:dpintoec@gmail.com
+    icon: mail
+  - title: Linkedin
+    url: https://www.linkedin.com/in/pintoderian/
+    icon: linkedin
+  - title: Github
+    url: https://github.com/pintoderian
+    icon: github
+yearOfWork: 2018
+birthdate: 1995-11-24
