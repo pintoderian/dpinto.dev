@@ -25,7 +25,7 @@ const icons: {
 };
 
 export default async function Experiences() {
-  const experiences = await getExperiences({});
+  const experiences = await getExperiences();
 
   return (
     <div className="experiences">

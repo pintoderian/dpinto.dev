@@ -55,7 +55,7 @@ export async function getExperiences({
   limit
 }: {
   limit?: number;
-}): Promise<ExperienceAllProps[] | null> {
+} = {}): Promise<ExperienceAllProps[] | null> {
   const data = await reader.collections.experiences.all();
 
   const experiences = data.sort(
@@ -75,7 +75,7 @@ export async function getPosts({
   limit
 }: {
   limit?: number;
-}): Promise<PostAllProps[] | null> {
+} = {}): Promise<PostAllProps[] | null> {
   const data = await reader.collections.posts.all();
 
   const posts = data.sort(
@@ -103,7 +103,7 @@ export async function getDynamicData({
   }
 
   if (category === "experiencia") {
-    const experiences = await getExperiences({});
+    const experiences = await getExperiences();
     const searchExperience = experiences?.find(
       (experience) => experience.slug === slug
     );
@@ -120,7 +120,7 @@ export async function getDynamicData({
   }
 
   if (category === "blog") {
-    const posts = await getPosts({});
+    const posts = await getPosts();
     const searchPost = posts?.find((post) => post.slug === slug);
     return searchPost
       ? {

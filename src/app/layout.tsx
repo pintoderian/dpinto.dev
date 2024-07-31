@@ -22,15 +22,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dpinto.dev"),
   title: {
     default: `Derian Pinto - ${data.badge}`,
-    template: "%s | Derian Pinto"
+    template: "%s - Derian Pinto"
   },
-  description: "FullStack Developer.",
+  alternates: { canonical: "/" },
+  description: "FullStack Developer de Ecuador",
   openGraph: {
     title: `Derian Pinto - ${data.badge}`,
-    description: "FullStack Developer.",
+    description: "FullStack Developer de Ecuador",
     url: "https://dpinto.dev",
     siteName: "Derian Pinto",
-    locale: "en-US",
+    locale: "es-EC",
     type: "website"
   },
   robots: {

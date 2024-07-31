@@ -2,11 +2,44 @@ import { serialize } from "@/lib/mdx-serializer";
 import { getDynamicData } from "@/services/database";
 import { notFound } from "next/navigation";
 import ContentPreview from "./content-preview";
-import HomeLayout from "@/components/layouts/home";
+import { getParams } from "@/lib/dynamic-pages";
+import { Metadata } from "next";
 
 export type DynamicParams = {
   filters: ["proyecto" | "blog" | "experiencia", string?, string?] | undefined;
 };
+
+export const generateStaticParams = async () => {
+  const dataSlugs = await getParams();
+  return dataSlugs;
+};
+
+export async function generateMetadata({
+  params
+}: {
+  params: DynamicParams;
+}): Promise<Metadata> {
+  const { filters } = params;
+  const category = filters?.[0] || "";
+  const slug = filters?.[1] || "";
+
+  const data = await getDynamicData({ category, slug });
+
+  if (!data) {
+    notFound();
+  }
+
+  const url = `/${category}/${slug}`;
+
+  return {
+    title: data.title,
+    alternates: { canonical: url },
+    openGraph: {
+      title: data.title,
+      url
+    }
+  };
+}
 
 export default async function DynamicPage({
   params
