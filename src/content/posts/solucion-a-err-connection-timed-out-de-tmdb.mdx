@@ -1,0 +1,43 @@
+---
+title: Solución a ERR_CONNECTION_TIMED_OUT de TMDB
+dateCreated: 2024-07-28
+summary: >-
+  El error ERR_CONNECTION_TIMED_OUT generalmente ocurre cuando el acceso a la
+  API de The Movie Database (TMDB) está bloqueado en el país donde se encuentra
+  el servidor.
+---
+El error ***ERR\_CONNECTION\_TIMED\_OUT*** generalmente ocurre cuando el acceso a la API de The Movie Database (TMDB) está bloqueado en el país donde se encuentra el servidor. Esto me sucedió cuando intenté poner en funcionamiento el sitio de un cliente que utilizaba la API para crear su catálogo de películas. El servidor estaba en Rusia, y la API estaba bloqueada en esa región.
+
+## Diagnóstico del Problema
+
+Al investigar en Internet, encontré poca información útil. Sin embargo, decidí buscar una solución práctica. Primero, extraje las IPs de los DNS-records de las APIs de TMDB utilizando nslookup:
+
+<Grid x="aside">
+  <Aside>
+    Se extrae la IP de la API para imágenes
+  </Aside>
+</Grid>
+
+```
+https://www.nslookup.io/domains/image.tmdb.org/dns-records/
+```
+
+<Grid x="aside">
+  <Aside>
+    Se extrae la IP de la API para las respuestas JSON
+  </Aside>
+</Grid>
+
+```
+https://www.nslookup.io/domains/api.themoviedb.org/dns-records/
+```
+
+## Implementación de la Solución
+
+Es importante asegurarse de seleccionar una IP válida, y en este caso, elegí una de Estados Unidos para evitar el bloqueo. Luego, accedí al archivo `/etc/hosts` en el servidor Ubuntu y agregué la siguiente línea:
+
+```
+99.84.214.124 api.themoviedb.org
+```
+
+Con esta configuración, el servidor pudo realizar peticiones a la API de TMDB sin problemas, solucionando el inconveniente de conexión.
