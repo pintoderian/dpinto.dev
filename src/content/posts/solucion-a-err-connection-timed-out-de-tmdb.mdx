@@ -2,42 +2,42 @@
 title: Solución a ERR_CONNECTION_TIMED_OUT de TMDB
 dateCreated: 2024-07-28
 summary: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget tellus
-  eu lectus luctus scelerisque non vitae ex. Mauris non quam quis lectus
-  fermentum ornare et eu nisl. Mauris tortor dui, porta ac orci sit amet
+  El error ERR_CONNECTION_TIMED_OUT generalmente ocurre cuando el acceso a la
+  API de The Movie Database (TMDB) está bloqueado en el país donde se encuentra
+  el servidor.
 ---
+El error ***ERR\_CONNECTION\_TIMED\_OUT*** generalmente ocurre cuando el acceso a la API de The Movie Database (TMDB) está bloqueado en el país donde se encuentra el servidor. Esto me sucedió cuando intenté poner en funcionamiento el sitio de un cliente que utilizaba la API para crear su catálogo de películas. El servidor estaba en Rusia, y la API estaba bloqueada en esa región.
+
+## Diagnóstico del Problema
+
+Al investigar en Internet, encontré poca información útil. Sin embargo, decidí buscar una solución práctica. Primero, extraje las IPs de los DNS-records de las APIs de TMDB utilizando nslookup:
+
 <Grid x="aside">
   <Aside>
-    Esto es una prueba
+    Se extrae la IP de la API para imágenes
   </Aside>
 </Grid>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget tellus eu lectus luctus scelerisque non vitae ex. Mauris non quam quis lectus fermentum ornare et eu nisl. Mauris tortor dui, porta ac orci sit amet, gravida interdum mi. Nullam sit amet ante semper massa congue sodales ac et elit. Fusce ac quam sed dui fringilla tempor ac at felis. Vestibulum quis pretium ex, eget aliquet quam. Integer sagittis mollis feugiat. Nullam accumsan ac nisl in cursus. Morbi elementum ornare eleifend. Aliquam ornare, massa id cursus iaculis, sapien turpis lobortis libero, non iaculis turpis tortor in enim. Aliquam vitae sapien at urna rhoncus ultricies id eu nibh.
-
-## Cras maximus cursus nisl, vel cursus orci efficitur
-
-Cras maximus cursus nisl, vel cursus orci efficitur ac. Phasellus consequat laoreet varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse sem nulla, sollicitudin non ex et, fermentum mollis ante. Mauris quis lobortis orci. Sed sit amet mi odio. Proin leo sem, consequat ultricies mauris et, consequat porttitor urna. Integer velit ante, tempus eget pretium a, placerat luctus turpis. In ullamcorper est nec nibh fringilla maximus. Curabitur id dui sed felis aliquet pharetra. In ac eleifend elit. Curabitur id scelerisque orci. Proin purus metus, aliquet et pharetra et, rutrum vehicula nunc. Ut ante lacus, vestibulum sit amet varius tincidunt, convallis ac ligula. Quisque laoreet a odio non fringilla.
-
-### Morbi urna metus, condimentum at mollis
-
-&#x20;sit amet, interdum ac nunc. In et orci mollis, mattis enim mattis, consequat ligula. Nulla sed eros bibendum metus gravida laoreet ac imperdiet risus. Aliquam sit amet interdum orci, nec blandit ipsum. Vivamus auctor lobortis lorem, id viverra sapien sodales sit amet. Maecenas eget lorem fermentum, mollis lectus eget, euismod lorem. Morbi maximus nunc vitae eros pharetra luctus. Phasellus sodales ultricies neque, a sodales est mattis volutpat.
-
-```css title="./styles/syntax-highlighting.css"
-pre[data-theme="dark"] {
-  color-scheme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  pre[data-theme="light"] {
-    display: none;
-  }
-}
-
-@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
-  pre[data-theme="dark"] {
-    display: none;
-  }
-}
+```
+https://www.nslookup.io/domains/image.tmdb.org/dns-records/
 ```
 
-Morbi urna metus, condimentum at mollis sit amet, interdum ac nunc. In et orci mollis, mattis enim mattis, consequat ligula. Nulla sed eros bibendum metus gravida laoreet ac imperdiet risus. Aliquam sit amet interdum orci, nec blandit ipsum. Vivamus auctor lobortis lorem, id viverra sapien sodales sit amet. Maecenas eget lorem fermentum, mollis lectus eget, euismod lorem. Morbi maximus nunc vitae eros pharetra luctus. Phasellus sodales ultricies neque, a sodales est mattis volutpat.
+<Grid x="aside">
+  <Aside>
+    Se extrae la IP de la API para las respuestas JSON
+  </Aside>
+</Grid>
+
+```
+https://www.nslookup.io/domains/api.themoviedb.org/dns-records/
+```
+
+## Implementación de la Solución
+
+Es importante asegurarse de seleccionar una IP válida, y en este caso, elegí una de Estados Unidos para evitar el bloqueo. Luego, accedí al archivo `/etc/hosts` en el servidor Ubuntu y agregué la siguiente línea:
+
+```
+99.84.214.124 api.themoviedb.org
+```
+
+Con esta configuración, el servidor pudo realizar peticiones a la API de TMDB sin problemas, solucionando el inconveniente de conexión.
