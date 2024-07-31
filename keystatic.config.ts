@@ -44,13 +44,14 @@ export default config({
   storage: {
     kind: "local"
   },
+  ui: {
+    brand: { name: "Derian" }
+  },
   collections: {
     projects: collection({
       label: "Projects",
       slugField: "title",
       path: "src/content/projects/*",
-      entryLayout: "content",
-      format: { contentField: "content" },
       schema: {
         title: fields.slug({
           name: { label: "Title", validation: { isRequired: true } }
@@ -59,14 +60,14 @@ export default config({
           label: "Date Created",
           validation: { isRequired: true }
         }),
-        summary: fields.text({
-          label: "Summary",
-          multiline: true
-        }),
         image: fields.image({
           label: "Image",
           directory: "public/images/projects",
           publicPath: "/images/projects/"
+        }),
+        link: fields.text({
+          label: "Project Link",
+          validation: { isRequired: true }
         }),
         tags: fields.multiselect({
           label: "Tags",
@@ -79,11 +80,6 @@ export default config({
             { label: "Laravel", value: "laravel" }
           ],
           defaultValue: []
-        }),
-        content: fields.mdx({
-          label: "Content",
-          extension: "mdx",
-          components: globalComponents
         })
       }
     }),

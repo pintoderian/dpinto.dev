@@ -21,7 +21,12 @@ export default async function Projects() {
                 key={`project-${index}`}
               >
                 <div className="hover:scale-[1.03] cursor-pointer transition-all ease-in-out duration-200">
-                  <Link title={title} href={`/proyecto/${project.slug}`}>
+                  <Link
+                    title={title}
+                    href={project.entry.link}
+                    target="_blank"
+                    rel="nofollow noopener"
+                  >
                     <div className="overflow-hidden">
                       {image && (
                         <Image
