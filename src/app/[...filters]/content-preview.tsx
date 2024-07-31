@@ -12,6 +12,7 @@ import Image from "next/image";
 interface MDXContentProps {
   title?: string;
   date?: string;
+  customDate?: string | null;
   image?: string | null;
   headings?: Heading[];
   source: MDXRemoteProps;
@@ -20,6 +21,7 @@ interface MDXContentProps {
 export default function ContentPreview({
   title,
   date,
+  customDate,
   image,
   headings,
   source
@@ -39,7 +41,8 @@ export default function ContentPreview({
         )}
 
         <div className="mt-4 flex space-x-2 text-blue-200/50">
-          {date && <div>{formatDate(date)}</div>}
+          {date && !customDate && <div>{formatDate(date)}</div>}
+          {customDate && <div>{customDate}</div>}
         </div>
       </div>
 

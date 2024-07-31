@@ -34,6 +34,7 @@ export default async function DynamicPage({
       title={data?.title}
       image={data?.image}
       date={data?.date}
+      customDate={data?.customDate}
       headings={headings}
       source={source}
     />

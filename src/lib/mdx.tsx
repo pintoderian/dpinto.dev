@@ -9,9 +9,11 @@ import { Grid } from "@/components/grid";
 import { Aside } from "@/components/aside";
 import { Code } from "@/components/code";
 import ButtonLinks from "@/components/button-links";
+import ImagePost from "@/components/image-post";
 
 export const components = {
   // Global components
+  ImagePost,
   Code,
   Grid,
   Aside,

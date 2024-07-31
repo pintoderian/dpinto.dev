@@ -112,6 +112,7 @@ export async function getDynamicData({
           title: searchExperience.entry.company,
           summary: `Experiencia de trabajo en ${searchExperience.entry.company}`,
           date: searchExperience.entry.dateStart,
+          customDate: searchExperience.entry.dateRange,
           image: null,
           content: searchExperience.entry.content
         }
@@ -125,6 +126,7 @@ export async function getDynamicData({
       ? {
           title: searchPost.entry.title,
           date: searchPost.entry.dateCreated,
+          customDate: null,
           summary: searchPost.entry.summary,
           image: searchPost.entry.image,
           content: searchPost.entry.content

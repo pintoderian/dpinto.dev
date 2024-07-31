@@ -4,6 +4,20 @@ import { block, wrapper } from "@keystatic/core/content-components";
 export const showAdminUI = process.env.NODE_ENV === "development";
 
 const globalComponents = {
+  ImagePost: block({
+    label: "ImagePost",
+    schema: {
+      url: fields.text({
+        label: "Image URL",
+        validation: { isRequired: true }
+      }),
+      alt: fields.text({
+        label: "Alt text",
+        description:
+          "This text will be used by screen readers and search engines."
+      })
+    }
+  }),
   Grid: wrapper({
     label: "Grid",
     schema: {
