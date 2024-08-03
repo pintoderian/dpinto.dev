@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { classnames } from "@/lib/classnames";
 import data from "@/content/data.json";
+import Analytics from "@/components/analytics";
 
 export const fontSans = localFont({
   src: "../fonts/HubotSans.woff2",
@@ -58,6 +59,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark" suppressHydrationWarning>
+      <head>
+        <Analytics />
+      </head>
       <body
         className={classnames(
           "min-h-screen font-sans antialiased relative text-blue-100/70 overflow-x-hidden bg-neutral-900",

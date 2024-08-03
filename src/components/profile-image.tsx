@@ -24,7 +24,7 @@ export const ProfileImage = ({ src }: { src: string }) => {
 
 export const ProfileImageLarge = ({ src }: { src: string }) => {
   return (
-    <div className="rounded-full bg-gradient-to-tl from-blue-600/60 to-black/60 p-1 shadow-lg ring-[5px] ring-purple-500/10 grayscale hover:grayscale-0">
+    <div className="rounded-full bg-gradient-to-tl from-blue-600/60 to-black/60 p-1 shadow-lg ring-[5px] ring-purple-500/10 grayscale">
       <Avatar src={src} />
     </div>
   );

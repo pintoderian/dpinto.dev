@@ -36,7 +36,8 @@ export async function generateMetadata({
     alternates: { canonical: url },
     openGraph: {
       title: data.title,
-      url
+      url,
+      images: `/og?title=${encodeURIComponent(data.title)}`
     }
   };
 }
