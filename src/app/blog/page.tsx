@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog",
-    url: "/blog"
+    url: "/blog",
+    images: "/og?title=Blog"
   }
 };
 
