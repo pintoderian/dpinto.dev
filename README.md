@@ -1,28 +1,20 @@
 <br />
 <p align="center">
-  <h3 align="center">Welcome to My Personal Website</h3>
+  <h3 align="center">Bienvenido a mi sitio web personal</h3>
 
   <p align="center">
-    Discover my skills and learn more about me!
+    ¡Descubre mis habilidades y aprende más sobre mí!
     <br />
     <a href="https://dpinto.dev">dpinto.dev</a>
   </p>
 </p>
 
-## Features
+## Características
 
-- **Responsive Design:** My website is designed to be fully responsive on all devices, ensuring an optimal user experience whether you're browsing on your phone, tablet, or desktop.
+- **Diseño Responsivo:** Mi sitio web está diseñado para ser totalmente responsivo en todos los dispositivos, asegurando una experiencia de usuario óptima ya sea que esté navegando en su teléfono, tableta o computadora de escritorio.
 
-- **Multilingual Content:** Explore the content in both English and Spanish, so you don't miss any details about my skills and projects.
-
-- **Light and Dark Mode:** Enhance your browsing experience by choosing between light and dark modes according to your preference.
-
-- **Social Media:** Connect with me on various social media platforms to stay updated and engage with my work.
+- **Redes sociales:** Conéctese conmigo en varias plataformas de redes sociales para mantenerse actualizado e interactuar con mi trabajo.
 
 <br/>
 
-Thank you for visiting my personal website. I hope you enjoy exploring my work and getting to know more about me!
-
-<br/>
-
-Inspired by the <a href="https://github.com/midudev/porfolio.dev">midudev repository</a>
+Gracias por visitar mi sitio web personal. ¡Espero que disfrutes explorando mi trabajo y conociendo más sobre mí!
