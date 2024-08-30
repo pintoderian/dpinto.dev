@@ -16,7 +16,7 @@ export default async function AboutMe() {
   return (
     <article
       id="about"
-      className="flex flex-col lg:flex-row gap-8 border-t border-blue-100/20 pt-12"
+      className="flex flex-col lg:flex-row gap-8 border-t border-b border-blue-100/20 pt-12 pb-12 lg:pb-2"
     >
       <div className="w-full lg:w-8/12 order-2 lg:order-1">
         <Summary className="text-base lg:pt-4" source={mdxSource} />
@@ -26,7 +26,7 @@ export default async function AboutMe() {
           <div className="flex justify-center w-full lg:mb-12">
             <Image
               style={{ objectPosition: "50% 50%" }}
-              className="object-cover w-64 h-full p-1 contrast-75 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-blue-500/5 ring-1 ring-blue-100/20 "
+              className="object-cover w-64 h-full p-1 grayscale rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-blue-500/5 ring-1 ring-blue-100/20 "
               src={setting?.aboutImage}
               alt="Derian Pinto"
               width={200}
