@@ -1,6 +1,9 @@
 title: Codegea
 dateCreated: 2024-07-24
 image: /images/projects/codegea/image.webp
+description: >-
+  Plataforma que ofrece servicios en el ámbito del desarrollo web, web scraping
+  y migración de datos.
 link: https://codegea.com/
 tags:
   - nextjs
