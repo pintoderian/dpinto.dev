@@ -13,7 +13,7 @@ export default async function Projects() {
       <div className="flex flex-col md:flex-row gap-y-16 md:gap-x-8">
         {Array.isArray(projects) &&
           projects?.map((project, index) => {
-            const { title, image, tags } = project.entry;
+            const { title, image, description, tags } = project.entry;
 
             return (
               <article
@@ -58,6 +58,7 @@ export default async function Projects() {
                         </div>
                         <IconArrow />
                       </div>
+                      <p className="text-sm">{description}</p>
                     </div>
                   </Link>
                 </div>

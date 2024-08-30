@@ -1,3 +1,4 @@
+import AboutMe from "@/components/about-me";
 import Badge from "@/components/badge";
 import Experiences from "@/components/experiences";
 import { Header } from "@/components/header";
@@ -54,6 +55,7 @@ export default async function Home() {
         <Experiences />
         <Projects />
         <Posts />
+        <AboutMe />
       </div>
     </HomeLayout>
   );

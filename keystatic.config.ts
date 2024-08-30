@@ -81,6 +81,10 @@ export default config({
           directory: "public/images/projects",
           publicPath: "/images/projects/"
         }),
+        description: fields.text({
+          label: "Description",
+          multiline: true
+        }),
         link: fields.text({
           label: "Project Link",
           validation: { isRequired: true }

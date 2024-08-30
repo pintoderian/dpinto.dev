@@ -1,6 +1,9 @@
 title: Next Directus Auth TS
 dateCreated: 2024-07-01
 image: /images/projects/next-directus-auth-ts/image.webp
+description: >-
+  Proporciona la estructura básica y las herramientas necesarias para iniciar el
+  desarrollo de su propia aplicación de panel con directus.
 link: https://github.com/pintoderian/next-directus-auth-ts
 tags:
   - nextjs
