@@ -1,0 +1,6 @@
+---
+// Las páginas por experiencia (Keystatic) se retiraron: la experiencia ahora
+// vive directamente en el home. Redirige en vez de dar 404.
+export const prerender = false;
+return Astro.redirect("/", 301);
+---

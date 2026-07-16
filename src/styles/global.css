@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Holimount";
+  src: url("/fonts/Holimount.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-paper: #ffffff;
+  --color-raised: #f8f7f4;
+  --color-ink: #1c2420;
+  --color-muted: #5b6459;
+  --color-line: #e7e5de;
+  --color-stamp: #a8402a;
+  --color-stampsoft: #f3e4dc;
+
+  --font-serif: "Fraunces", serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-signature: "Holimount", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--color-stamp);
+  color: var(--color-raised);
+}
+
+.icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  transition: all 0.15s ease;
+}
+.icon-btn:hover {
+  border-color: var(--color-stamp);
+  color: var(--color-stamp);
+  background: var(--color-stampsoft);
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  background: var(--color-stampsoft);
+  color: var(--color-stamp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.pill {
+  border: 1px solid var(--color-line);
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 14px;
+  background: var(--color-raised);
+}
+
+.step {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: var(--color-stampsoft);
+  color: var(--color-stamp);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.chev {
+  transition: transform 0.2s ease;
+}
+.exp-row.is-open .chev {
+  transform: rotate(90deg);
+}
+
+.exp-row {
+  border-radius: 16px;
+  transition: background-color 0.15s ease;
+}
+.exp-row:hover,
+details[open].exp-row {
+  background: var(--color-raised);
+}
+.exp-row summary:focus-visible {
+  outline: 2px solid var(--color-stamp);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+/* Los navegadores nuevos animan el open/close de <details> por su cuenta
+   (::details-content). Eso competía con la animación por JS de abajo y se
+   sentía como un rebote — se apaga acá para que solo mande el script. */
+.exp-row::details-content {
+  transition: none;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

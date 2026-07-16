@@ -1,0 +1,6 @@
+---
+// El blog se retiró del sitio. Cualquier post viejo indexado en Google
+// (/blog/lo-que-sea) redirige al home en vez de dar 404, para no perder SEO.
+export const prerender = false;
+return Astro.redirect("/", 301);
+---
