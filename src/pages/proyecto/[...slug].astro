@@ -1,0 +1,6 @@
+---
+// Las páginas de proyecto individuales (Keystatic) se retiraron. Redirige
+// en vez de dar 404.
+export const prerender = false;
+return Astro.redirect("/", 301);
+---

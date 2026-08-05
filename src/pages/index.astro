@@ -1,0 +1,431 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { profile, about, nimbus, experiences, stack } from "@/data/profile";
+---
+
+<Layout>
+  <div class="max-w-6xl mx-auto relative">
+    <!-- sidebar: position:fixed on desktop so accordion/height changes in
+         main can never move or reflow it -->
+    <aside
+      class="md:w-72 shrink-0 md:fixed md:top-0 md:left-[max(0px,calc((100vw-72rem)/2))] md:h-screen px-6 md:px-8 py-10 md:py-14 md:border-r border-line flex flex-col"
+    >
+      <div>
+        <p class="font-mono text-[11px] tracking-[0.15em] uppercase text-muted mb-3">
+          Perfil profesional
+        </p>
+        <h1 class="font-serif text-3xl leading-[1.05]">{profile.name}</h1>
+        <p class="mt-2 text-sm text-stamp">
+          Founder @{" "}
+          <a
+            href={profile.company.url}
+            class="underline decoration-line underline-offset-4 hover:decoration-stamp"
+            >{profile.company.name}</a
+          >
+        </p>
+        <p class="mt-0.5 text-sm text-muted">{profile.location}</p>
+
+        <span
+          class="mt-6 inline-block rounded-full border border-stamp text-stamp font-mono text-[10px] tracking-[0.12em] uppercase px-3.5 py-1.5"
+          >Disponible para proyectos</span
+        >
+      </div>
+
+      <nav class="mt-12 space-y-3 hidden md:block">
+        <a href="#about" class="flex items-baseline gap-3 group">
+          <span class="font-mono text-xs text-stamp">01</span>
+          <span class="text-sm text-muted group-hover:text-ink transition-colors"
+            >Sobre mí</span
+          >
+        </a>
+        <a href="#nimbus" class="flex items-baseline gap-3 group">
+          <span class="font-mono text-xs text-stamp">02</span>
+          <span class="text-sm text-muted group-hover:text-ink transition-colors"
+            >Nimbus</span
+          >
+        </a>
+        <a href="#experiencia" class="flex items-baseline gap-3 group">
+          <span class="font-mono text-xs text-stamp">03</span>
+          <span class="text-sm text-muted group-hover:text-ink transition-colors"
+            >Experiencia</span
+          >
+        </a>
+        <a href="#stack" class="flex items-baseline gap-3 group">
+          <span class="font-mono text-xs text-stamp">04</span>
+          <span class="text-sm text-muted group-hover:text-ink transition-colors"
+            >Stack</span
+          >
+        </a>
+        <a href="#contacto" class="flex items-baseline gap-3 group">
+          <span class="font-mono text-xs text-stamp">05</span>
+          <span class="text-sm text-muted group-hover:text-ink transition-colors"
+            >Contacto</span
+          >
+        </a>
+      </nav>
+
+      <div class="mt-auto pt-12 flex flex-wrap gap-2.5">
+        <a href={`mailto:${profile.email}`} title="Correo" class="icon-btn">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"
+            ><rect x="2" y="4" width="16" height="12" rx="2"></rect><path
+              d="M3 5.5l7 5.5 7-5.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path></svg
+          >
+        </a>
+        <a href={profile.social.linkedin} title="LinkedIn" class="icon-btn">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"
+            ><rect x="2" y="2" width="16" height="16" rx="4"></rect><circle
+              cx="6.6"
+              cy="6.8"
+              r="0.9"
+              fill="currentColor"
+              stroke="none"></circle><path d="M6.6 9.2v5" stroke-linecap="round"
+            ></path><path
+              d="M9.4 14.2V10.8c0-1 0.8-1.7 1.8-1.7s1.7 0.7 1.7 1.7v3.4"
+              stroke-linecap="round"></path></svg
+          >
+        </a>
+        <a href={profile.social.github} title="GitHub" class="icon-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+            ><path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"
+            ></path></svg
+          >
+        </a>
+        <a href={profile.social.site} title="Sitio web" class="icon-btn">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"
+            ><circle cx="10" cy="10" r="8"></circle><path
+              d="M2 10h16"
+              stroke-linecap="round"></path><path
+              d="M10 2c2.6 2.4 2.6 13.6 0 16M10 2c-2.6 2.4-2.6 13.6 0 16"
+              stroke-linecap="round"></path></svg
+          >
+        </a>
+      </div>
+    </aside>
+
+    <!-- main -->
+    <main class="md:ml-72 px-6 md:px-14 py-10 md:py-14 max-w-2xl">
+      <!-- 01 about -->
+      <section id="about" class="pb-14 md:pb-16 scroll-mt-10" data-reveal>
+        <p class="font-mono text-xs text-muted mb-6">
+          <span class="text-stamp">01</span> / Sobre mí
+        </p>
+
+        <div class="relative pl-6 border-l border-line">
+          <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-stamp"></span>
+          <p class="font-serif text-2xl md:text-3xl leading-snug">
+            {about.headline}
+          </p>
+          {
+            about.body.map((paragraph) => (
+              <p class="mt-5 text-[15px] leading-relaxed text-muted">
+                {paragraph.split("Codegea").map((part, i, arr) =>
+                  i < arr.length - 1 ? (
+                    <>
+                      {part}
+                      <a
+                        href={profile.company.url}
+                        class="text-ink underline decoration-line underline-offset-4 hover:decoration-stamp"
+                      >
+                        Codegea
+                      </a>
+                    </>
+                  ) : (
+                    part
+                  )
+                )}
+              </p>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- 02 nimbus -->
+      <section id="nimbus" class="py-14 md:py-16 border-t border-line scroll-mt-10" data-reveal>
+        <p class="font-mono text-xs text-muted mb-6">
+          <span class="text-stamp">02</span> / Trabajo destacado
+        </p>
+
+        <div class="bg-raised border border-line rounded-2xl overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 px-6 py-4 border-b border-line">
+            <div class="flex items-center gap-3">
+              <span class="pill">SRI</span>
+              <span class="font-mono text-[11px] text-muted uppercase tracking-wide"
+                >Producto propio</span
+              >
+            </div>
+            <a href={nimbus.url} class="font-mono text-[11px] text-stamp hover:text-ink"
+              >nimbus.com.ec</a
+            >
+          </div>
+
+          <div class="px-6 py-7">
+            <h2 class="font-serif text-3xl">{nimbus.name}</h2>
+            <p class="mt-1 text-sm text-muted">{nimbus.tagline}</p>
+            <p class="mt-5 text-[15px] leading-relaxed text-ink/90">
+              {nimbus.description.split("Codegea").map((part, i, arr) =>
+                i < arr.length - 1 ? (
+                  <>
+                    {part}
+                    <a
+                      href={profile.company.url}
+                      class="text-ink underline decoration-line underline-offset-4 hover:decoration-stamp"
+                    >
+                      Codegea
+                    </a>
+                  </>
+                ) : (
+                  part
+                )
+              )}
+            </p>
+
+            <ul class="mt-6 space-y-3">
+              {
+                nimbus.features.map((feature, index) => (
+                  <li class="flex gap-3 items-start">
+                    <span class="step mt-0.5">{index + 1}</span>
+                    <span class="text-[14px] text-ink/90 leading-snug pt-0.5">
+                      {feature}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 experiencia -->
+      <section id="experiencia" class="py-14 md:py-16 border-t border-line scroll-mt-10" data-reveal>
+        <p class="font-mono text-xs text-muted mb-6">
+          <span class="text-stamp">03</span> / Experiencia
+        </p>
+
+        <div class="space-y-2">
+          {
+            experiences.map((experience) => (
+              <details
+                class:list={["exp-row px-4 py-4", experience.current && "is-open"]}
+                open={experience.current}
+              >
+                <summary class="flex items-center gap-4 cursor-pointer">
+                  <span class="avatar">{experience.initials}</span>
+                  <div class="flex-1 flex flex-wrap items-baseline justify-between gap-2">
+                    <span class="font-serif text-xl">
+                      {experience.company}{" "}
+                      <span
+                        class:list={[
+                          "font-mono text-xs align-middle ml-2",
+                          experience.current ? "text-stamp" : "text-muted"
+                        ]}
+                      >
+                        {experience.role}
+                      </span>
+                    </span>
+                    <span class="font-mono text-xs text-muted">{experience.dateRange}</span>
+                  </div>
+                  <svg
+                    class="chev w-3.5 h-3.5 text-muted shrink-0"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M6 4l4 4-4 4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </summary>
+                <div class="exp-body">
+                  <p class="mt-3 pl-[52px] text-[14px] leading-relaxed text-muted max-w-xl">
+                    {experience.description}
+                  </p>
+                </div>
+              </details>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- 04 stack -->
+      <section id="stack" class="py-14 md:py-16 border-t border-line scroll-mt-10" data-reveal>
+        <p class="font-mono text-xs text-muted mb-6">
+          <span class="text-stamp">04</span> / Con qué trabajo
+        </p>
+        <div class="flex flex-wrap gap-2.5">
+          {stack.map((tech) => <span class="pill">{tech}</span>)}
+        </div>
+      </section>
+
+      <!-- 05 contacto -->
+      <section id="contacto" class="py-14 md:py-16 border-t border-line scroll-mt-10" data-reveal>
+        <p class="font-mono text-xs text-muted mb-6">
+          <span class="text-stamp">05</span> / Contacto
+        </p>
+        <p class="font-serif text-3xl md:text-4xl max-w-lg">¿Construimos algo?</p>
+        <a
+          href={`mailto:${profile.email}`}
+          class="mt-6 inline-block font-mono text-xs uppercase tracking-[0.15em] rounded-full bg-ink text-paper px-6 py-3.5 hover:bg-stamp transition-colors"
+          >Escribime — {profile.email}</a
+        >
+        <div class="mt-8 flex gap-2.5 md:hidden">
+          <a href={profile.social.linkedin} class="icon-btn">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"
+              ><rect x="2" y="2" width="16" height="16" rx="4"></rect><circle
+                cx="6.6"
+                cy="6.8"
+                r="0.9"
+                fill="currentColor"
+                stroke="none"></circle><path d="M6.6 9.2v5" stroke-linecap="round"
+              ></path><path
+                d="M9.4 14.2V10.8c0-1 0.8-1.7 1.8-1.7s1.7 0.7 1.7 1.7v3.4"
+                stroke-linecap="round"></path></svg
+            >
+          </a>
+          <a href={profile.social.github} class="icon-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+              ><path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path></svg
+            >
+          </a>
+          <a href={profile.social.site} class="icon-btn">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"
+              ><circle cx="10" cy="10" r="8"></circle><path
+                d="M2 10h16"
+                stroke-linecap="round"></path><path
+                d="M10 2c2.6 2.4 2.6 13.6 0 16M10 2c-2.6 2.4-2.6 13.6 0 16"
+                stroke-linecap="round"></path></svg
+            >
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="max-w-6xl mx-auto border-t border-line" data-reveal>
+    <div
+      class="md:ml-72 px-6 md:px-14 py-10 flex flex-wrap items-center justify-between gap-4"
+    >
+      <p class="font-signature text-4xl md:text-5xl text-ink leading-none">{profile.name}</p>
+      <p class="font-mono text-xs text-muted uppercase tracking-[0.12em]">
+        2026 · {profile.location}
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // Secciones que aparecen suavemente al entrar en pantalla.
+    const revealEls = document.querySelectorAll("[data-reveal]");
+    if (reduceMotion) {
+      revealEls.forEach((el) => el.classList.add("is-visible"));
+    } else {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+      );
+      revealEls.forEach((el) => revealObserver.observe(el));
+    }
+
+    // Acordeón de experiencia: altura animada + solo uno abierto a la vez.
+    class Accordion {
+      el: HTMLDetailsElement;
+      summary: HTMLElement;
+      animation: Animation | null = null;
+      busy = false;
+
+      constructor(el: HTMLDetailsElement) {
+        this.el = el;
+        this.summary = el.querySelector("summary")!;
+        this.summary.addEventListener("click", (event) => this.onClick(event));
+      }
+
+      onClick(event: MouseEvent) {
+        event.preventDefault();
+        if (this.busy) return;
+
+        if (this.el.open) {
+          this.shrink();
+          return;
+        }
+
+        // Solo un acordeón abierto a la vez: si hay otro abierto, se cierra
+        // primero y recién cuando termina arranca la apertura del nuevo.
+        // Animar los dos a la vez es lo que hacía que el que se abre
+        // "salte" sobre el que se está cerrando.
+        const openEntry = [...accordions.entries()].find(
+          ([otherEl]) => otherEl !== this.el && otherEl.open
+        );
+        if (openEntry) {
+          openEntry[1].shrink(() => this.expand());
+        } else {
+          this.expand();
+        }
+      }
+
+      shrink(onDone?: () => void) {
+        this.busy = true;
+        this.el.classList.remove("is-open");
+        this.el.style.overflow = "hidden";
+        const startHeight = `${this.el.offsetHeight}px`;
+        const endHeight = `${this.summary.offsetHeight}px`;
+        this.animation?.cancel();
+        this.animation = this.el.animate(
+          { height: [startHeight, endHeight] },
+          { duration: reduceMotion ? 0 : 220, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
+        );
+        this.animation.onfinish = () => {
+          this.el.open = false;
+          this.reset();
+          onDone?.();
+        };
+      }
+
+      expand() {
+        this.busy = true;
+        this.el.classList.add("is-open");
+        this.el.style.overflow = "hidden";
+        this.el.open = true;
+        const startHeight = `${this.summary.offsetHeight}px`;
+        const endHeight = `${this.el.offsetHeight}px`;
+        this.el.style.height = startHeight;
+        requestAnimationFrame(() => {
+          this.animation?.cancel();
+          this.animation = this.el.animate(
+            { height: [startHeight, endHeight] },
+            { duration: reduceMotion ? 0 : 220, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
+          );
+          this.animation.onfinish = () => this.reset();
+        });
+      }
+
+      reset() {
+        this.el.style.height = "";
+        this.el.style.overflow = "";
+        this.busy = false;
+        this.animation = null;
+      }
+    }
+
+    const accordions = new Map<HTMLDetailsElement, Accordion>();
+    document
+      .querySelectorAll<HTMLDetailsElement>("details.exp-row")
+      .forEach((el) => accordions.set(el, new Accordion(el)));
+  </script>
+</Layout>
