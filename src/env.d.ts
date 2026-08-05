@@ -2,7 +2,7 @@
 /// <reference types="astro/client" />
 
 interface ImportMetaEnv {
-  readonly PUBLIC_ANALYTICS_ID?: string;
+  readonly PUBLIC_AHREFS?: string;
 }
 
 interface ImportMeta {

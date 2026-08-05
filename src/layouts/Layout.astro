@@ -13,7 +13,7 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL("/og.jpg", Astro.site);
-const analyticsId = import.meta.env.PUBLIC_ANALYTICS_ID;
+const ahrefsKey = import.meta.env.PUBLIC_AHREFS;
 ---
 
 <!doctype html>
@@ -51,11 +51,11 @@ const analyticsId = import.meta.env.PUBLIC_ANALYTICS_ID;
     />
 
     {
-      analyticsId && (
+      ahrefsKey && (
         <script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id={analyticsId}
+          async
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key={ahrefsKey}
         />
       )
     }
